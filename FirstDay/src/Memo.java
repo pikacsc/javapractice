@@ -7,7 +7,7 @@ public class Memo {
 		System.out.println("2.환경변수 설정");
 		System.out.println("3.eclipse 설치");
 		System.out.println("4.git 연습");
-		//새내용추가 삭제함
+		System.out.println("다시 새내용 추가할까 말까 생각중");
 		
 	}
 
