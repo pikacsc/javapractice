@@ -37,7 +37,25 @@ byte
 
 
 7. 아래와 같이 코딩 해보고 왜 결과가 그렇게 되는지 설명하시오.
-""
+
+  String a = 10 + 7 + "";
+
+  String b = 8 + "" + 2; 
+
+  String c = "" + 5 + 2; 
+
+  
+
+  System.out.println(a); 
+
+  System.out.println(b); 
+
+  System.out.println(c); 
+
+ 17
+ 82
+ 52
+
 
  */
 
@@ -48,20 +66,20 @@ public class Test1_1 {
 	public static void main(String[] args) {
 
 
-//		  String a = 10 + 7 + "";
-//
-//		  String b = 8 + "" + 2; 
-//
-//		  String c = "" + 5 + 2; 
-//
-//		  
-//
-//		  System.out.println(a); 
-//
-//		  System.out.println(b); 
-//
-//		  System.out.println(c); 
-//
+		  String y = 10 + 7 + "";
+
+		  String k = 8 + "" + 2; 
+
+		  String l = "" + 5 + 2; 
+
+		  
+
+		  System.out.println(y); 
+
+		  System.out.println(k); 
+
+		  System.out.println(l); 
+
 		  byte a = 10;
 		  byte b = 30;
 		  int c = a*b;
