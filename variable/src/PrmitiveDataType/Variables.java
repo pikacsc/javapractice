@@ -29,7 +29,6 @@ public class Variables {
 		System.out.println(b);
 		System.out.println(c);
 		
-		
 		//float, long 은 뒤에 f 나 l 을 써줘야됨
 		float pi = 3.14f;
 		long ln = 1414141241415151515l;
