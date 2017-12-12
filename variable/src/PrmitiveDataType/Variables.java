@@ -41,7 +41,10 @@ public class Variables {
 		//정수 i 10을 담겠다.
 		int i = 10;
 		int j = i;
+		
 		System.out.println("i=" + i + "이고 j도 " + j + "이다");
+		//println 안에  ""로 구분하는 부분은 자동으로 문자열 처리 되고 그외에 변수명을 써줄때는  "+ 변수명 +" 으로 구분한다 
+		
 		
 	}
   
