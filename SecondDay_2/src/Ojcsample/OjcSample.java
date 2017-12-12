@@ -28,7 +28,6 @@ public class OjcSample {
 //		블럭지정후 ctrl + / 해주면 주석처리가 쉬워짐
 		
 		
-		
 	}
 
 }
