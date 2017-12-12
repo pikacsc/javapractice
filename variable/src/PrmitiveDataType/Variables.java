@@ -16,6 +16,7 @@ public class Variables {
           //literal
 		
 		
+		
 	   //출력문
 		System.out.println("a는 "+a);
 		
