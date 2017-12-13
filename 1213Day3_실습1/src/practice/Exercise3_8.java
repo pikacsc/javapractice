@@ -1,7 +1,7 @@
 package practice;
 
 /**
- * 
+ * Á¤´ä
 c=30
 
 ch=C
