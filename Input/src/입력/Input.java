@@ -30,5 +30,8 @@ public class Input {
 		String name = sc2.nextLine();
 		
 		System.out.println("당신의 이름은 "+name+" 입니다"); //Line 은 문자열을 뜻함
+		
+		if(sc!=null) sc.close();
+		if(sc2!=null) sc2.close();
 	}
 }
