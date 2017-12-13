@@ -10,11 +10,8 @@ public class Operator {
 		int numb = 8;
 		int numb2 = 2;
 		
-		int sum = 0;
-		int minus = 0;
-		int multi = 0;
-		int dvide = 0;
-		int left = 0;
+		int sum, minus, multi, dvide, left = 0;
+		
 		
 		sum = numb + numb2;
 		minus = numb - numb2;
