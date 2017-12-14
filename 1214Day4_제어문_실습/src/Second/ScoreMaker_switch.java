@@ -18,7 +18,10 @@ public class ScoreMaker_switch {
 		수학 = sc.nextInt();
 		
 		int score = (국어+영어+수학)/3;
-		String result = 90<=score && 100 >= score? "A" : 80<=score && 90 > score ? "B":70<=score && 80 > score?"C":60<=score && 70 > score?"D":"F";   
+		String result = 90<=score && 100 >= score? "A": 
+			            80<=score && 90 >   score? "B":
+			            70<=score && 80 >   score? "C":
+			            60<=score && 70 >   score? "D":"F";   
 		switch(result) {
 			case "A":
 				 System.out.println(l+" A");
