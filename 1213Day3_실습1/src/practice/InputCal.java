@@ -38,7 +38,6 @@ package practice;
 
 import java.util.Scanner;
 
-
 public class InputCal {
 
 	
@@ -57,9 +56,9 @@ public class InputCal {
 		System.out.println("1.숫자를 두개 입력 받고 \r\n" + 
 				"두수를 더한 값을 출력하세요. ");
 		
-		System.out.println("첫번째 숫자 a 입력:");
+		System.out.print("첫번째 숫자 a 입력:"); //println : 출력한뒤 개행, print : 출력만하고 개행은 하지 않음
 		a = sc.nextInt();
-		System.out.println("두번째 숫자 b 입력:");
+		System.out.print("두번째 숫자 b 입력:");
 		b = sc.nextInt();
 		System.out.println("a+b="+(a+b));
 		
@@ -77,9 +76,9 @@ public class InputCal {
 		
 		System.out.println(j);
 		
-		System.out.println("첫번째 숫자 a 입력:");
+		System.out.print("첫번째 숫자 a 입력:");
 		a = sc.nextInt();
-		System.out.println("두번째 숫자 b 입력:");
+		System.out.print("두번째 숫자 b 입력:");
 		b = sc.nextInt();
 		System.out.println("a-b="+(a-b));
 		
@@ -96,9 +95,9 @@ public class InputCal {
 		
 		System.out.println(k);
 		
-		System.out.println("첫번째 숫자 a 입력:");
+		System.out.print("첫번째 숫자 a 입력:");
 		a = sc.nextInt();
-		System.out.println("두번째 숫자 b 입력:");
+		System.out.print("두번째 숫자 b 입력:");
 		b = sc.nextInt();
 		System.out.println("a*b="+(a*b));
 		
@@ -115,9 +114,9 @@ public class InputCal {
 		
 		System.out.println(l);
 		
-		System.out.println("첫번째 숫자 a 입력:");
+		System.out.print("첫번째 숫자 a 입력:");
 		a = sc.nextInt();
-		System.out.println("두번째 숫자 b 입력:");
+		System.out.print("두번째 숫자 b 입력:");
 		b = sc.nextInt();
 		System.out.println("a/b="+(a/b));
 		
@@ -134,9 +133,9 @@ public class InputCal {
 		
 		System.out.println(m);
 		
-		System.out.println("첫번째 숫자 a 입력:");
+		System.out.print("첫번째 숫자 a 입력:");
 		a = sc.nextInt();
-		System.out.println("두번째 숫자 b 입력:");
+		System.out.print("두번째 숫자 b 입력:");
 		b = sc.nextInt();
 		System.out.println("a%b="+(a%b));
 		
@@ -145,32 +144,52 @@ public class InputCal {
 
 
 	String id, pw, gender, hobby, email;
-	int age;
-	int birth; 
+	String age;
+	String birth; 
 	
+	/*
+	 * **추가로 배운 내용 , 중요함
+	 * 
+	 * Casting 가능한 data type들
+	 * byte<short<int<long<float<double
+	 * char
+	 * 
+	 * 
+	 * 
+	 * String 은 클래스, 참조변수 이므로 Casting이 안됨
+	 * Integer.parseInt(String) 을 사용해서 형변환 해야됨
+	 * 
+	 */
+	
+	
+	System.out.println("");
+	System.out.println("");
+	System.out.println("");
 	System.out.println("탑크리에듀 회원가입");
-	System.out.println("ID를 입력하세요:");
+	System.out.print("ID를 입력하세요:");
 	id = joinSc.nextLine();
 	
 	
-	System.out.println("패스워드를 입력하세요:");
+	System.out.print("패스워드를 입력하세요:");
 	pw = joinSc.nextLine();
 	
-	System.out.println("성별을 입력하세요:");
+	System.out.print("성별을 입력하세요:");
 	gender = joinSc.nextLine();
 	
-	System.out.println("취미를 입력하세요:");
+	System.out.print("취미를 입력하세요:");
     hobby = joinSc.nextLine();
 	
-    System.out.println("이메일을 입력하세요:");
+    
+	System.out.print("주민번호 앞자리를 입력하세요 또는 생년월일,숫자만 입력할것 ex) 920X0X: ");
+	birth = joinSc.nextLine();
+	int ageNumb = Integer.parseInt(birth);
+	
+	System.out.print("나이를 입력하세요:");
+	age = joinSc.nextLine();
+	int birthNumb = Integer.parseInt(age);
+	
+	System.out.print("이메일을 입력하세요:");
 	email = joinSc.nextLine();
-	
-	System.out.println("주민번호 앞자리를 입력하세요 또는 생년월일,숫자만 입력할것 ex) 920X0X: ");
-	birth = joinSc.nextInt();
-	
-	System.out.println("나이를 입력하세요:");
-	age = joinSc.nextInt();
-	
 	
 	
 	System.out.println("");
@@ -184,8 +203,8 @@ public class InputCal {
 	System.out.println("성별 : "+gender);
 	System.out.println("취미 : "+hobby);
 	System.out.println("email : "+email);
-	System.out.println("생년월일 : "+birth);
-	System.out.println("나이 : "+age+"세");
+	System.out.println("생년월일 : "+birthNumb);
+	System.out.println("나이 : "+ageNumb+"세");
 
 	
 	int x = 8;
@@ -197,6 +216,15 @@ public class InputCal {
 //	++x == 9  
 //	--x == 7  
 //	y++ == 3 첫번째 라인에선 3  
+	
+/*  
+ * 정답: x++,x-- 후위연산자는 첫번째 라인에서 출력할때 x부터  출력되고 x++ +2  이면 첫번째 라인에서는 x+2와 같다 두번째 라인에서는 x+1+2 와 같다
+ * 	
+ */
+	
+	
+	
+	
 	
 	System.out.println(result);
 	//답은 :8+2-9+7+3=11
