@@ -22,9 +22,9 @@ public static void main(String[] args) {
 byte a = 10;
 byte b = 20;
 int c = a + b; 
-char ch = 'A'; 
+char ch = 'A';  // A == 65, B == 66, C ==67 
 
-//ch =ch + 2;
+//ch =ch + 2; 
 ch =(char)(ch + 2); //(ch + 2)한뒤 Casting 필요 
 
 //float f = 3 / 2;
