@@ -20,7 +20,7 @@ public class Test6 {
 		System.out.print("숫자를 입력하세요:");
 		numb = sc.nextInt();
 		t6.numbCheck(numb);
-		
+
 //		result = (numb%2==0)? "짝입니다 true":"홀입니다 false";
 //		
 //      응용↓		
