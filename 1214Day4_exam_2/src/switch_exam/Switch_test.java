@@ -3,11 +3,8 @@ package switch_exam;
 import java.util.Scanner;
 
 public class Switch_test {
-
 	public static void main(String[] args) {
-		
-		Scanner sc = new Scanner(System.in);
-		int i = 0;
+	
 		
 //		switch (/* 정수, 문자열*/) {
 //		case 0:
@@ -73,19 +70,63 @@ public class Switch_test {
 //			System.out.println("토요일");
 //			break;
 //		}
+//		
+//		String day = "";
+//		System.out.println("요일을 입력하세요 ex)월요일 :");
+//		day = sc.nextLine();
+//		
+//		if(day.equals("일요일")) { //day =="일요일",왼쪽과 같은 문자열 비교는 ,메모리 영역이 달라서 안정성이 떨어짐(stack,heap), 
+//			//day.equals("일요일") 가 안정적임 
+//			System.out.println("sunday");
+//		}else if(day.equals("월요일")) {
+//			System.out.println("monday");
+//		}
+//		
+		Switch_test st = new Switch_test();
 		
-		String day = "";
-		System.out.println("요일을 입력하세요 ex)월요일 :");
+		st.inputDay();
+	}
+	int i ;
+	String day;
+	private void inputDay() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Scanner active");
+		System.out.println("요일을 입력하세요 ex)월요일: ");
 		day = sc.nextLine();
-		
-		if(day.equals("일요일")) { //day =="일요일",왼쪽과 같은 문자열 비교는 ,메모리 영역이 달라서 안정성이 떨어짐(stack,heap), 
-			//day.equals("일요일") 가 안정적임 
-			System.out.println("sunday");
-		}else if(day.equals("월요일")) {
-			System.out.println("monday");
+		try {	
+			switch(day) {
+				case "일요일":
+					System.out.println("sun");
+					break;
+				case "월요일":
+					System.out.println("mon");
+					break;
+				case "화요일":
+					System.out.println("tue");
+					break;
+				case "수요일":
+					System.out.println("wed");
+			        break;
+				case "목요일":
+					System.out.println("thu");
+					break;
+				default :
+					System.out.println("요일이 아닙니다 잘못 입력했습니다.");
+					break;
+			}
+		} catch (Exception e) {
+			System.out.println("에러발생");
+			e.printStackTrace();
+			}
+		finally {
+			try {
+			System.out.println("scanner closed");
+			if(sc!=null) sc.close();
+			} catch(Exception e2) {
+				System.out.println("scanner closed failed");
+				e2.printStackTrace();
+			}
 		}
-		
-		
 	}
 
 }
