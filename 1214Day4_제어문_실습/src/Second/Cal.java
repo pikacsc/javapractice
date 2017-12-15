@@ -15,20 +15,22 @@ public class Cal {
 		a = sc.nextInt();
 		b = sc.nextInt();
 		System.out.println("연산자중 하나를 입력하세요 + - * /:");
-		op = sc2.next();
-		System.out.println("구현 방법을 선택하세요 1.if문, 2.switch문");
-		c = sc.nextInt();
-		switch(c) {
-			case 1:
-				cal.ifLogic(op,a,b);
-				break;
-			case 2:
-				cal.ifLogic(op,a,b);
-				break;
-			default:
-				System.out.println("오류:없는 구현방법입니다");
-				break;
-		}
+		op = sc2.next(); //nextInt()를 앞에서 쓰다가 nextLine() 쓰면 오류가 뜨므로 next(); 로 넣어줌
+		if(op == "+" || op == "-" || op == "*" || op == "/") {
+			System.out.println("구현 방법을 선택하세요 1.if문, 2.switch문");
+			c = sc.nextInt();
+			switch(c) {
+				case 1:
+					cal.ifLogic(op,a,b);
+					break;
+				case 2:
+					cal.ifLogic(op,a,b);
+					break;
+				default:
+					System.out.println("오류:없는 구현방법입니다");
+					break;
+			}
+		} else System.out.println("오류:없는 연산자 입니다");
 	}
 	
 	int result;
