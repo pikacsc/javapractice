@@ -97,7 +97,8 @@ public class While_1 {
 			//break 라벨 인경우 라벨 밑까지는 반복을 하지않게됨 보통 가독성을 위해 LABEL로 표기
 		for(int i=0;i<5;i++) {
 			for(int j=0;j<5;j++) {
-				if(j==3) continue LABEL; //j for문 건너뛰고i for문을 돌게됨 , continue LABEL; || break LABEL;
+				if(j==3) break LABEL; //j for문 건너뛰고 ifor문을 돌게됨 , continue LABEL; || break LABEL;
+										 //그냥 break; 일경우 ifor문을 돌게됨 그러나 break LABEL;을 쓰면 한번에 탈출가능
 				System.out.printf("안녕하세요 %s번째 하고있습니다. \n", count++);
 			}
 		}
