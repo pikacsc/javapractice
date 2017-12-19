@@ -3,7 +3,6 @@ package ³×ÀÌ¹ö;
 import java.util.Scanner;
 
 public class Naver {
-	int count;
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		short menuInput;
