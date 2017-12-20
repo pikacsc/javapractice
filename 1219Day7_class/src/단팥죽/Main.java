@@ -7,7 +7,9 @@ public class Main {
 	public static void main(String []args) {
 									//[дц╥Ё][фоавюл╦╖]
 		Scanner sc2 = new Scanner(System.in);
-		String фоавевюл╨М[][] = new String[4][6];
+		System.out.print("фоава╬╥Ы╟╧╪Ж╦╕ ╦уюЗ ют╥бго╪╪©Д:");
+		int фоава╬╥Ы╟╧╪Ж = sc2.nextByte(); 
+		String фоавевюл╨М[][] = new String[4][фоава╬╥Ы╟╧╪Ж];
 		Main m = new Main();
 		int i = 0;
 		╢эфоав test = new ╢эфоав();
