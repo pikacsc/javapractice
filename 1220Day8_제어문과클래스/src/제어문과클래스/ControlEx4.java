@@ -33,7 +33,5 @@ public class ControlEx4 {
 		
 		
 	}
-	void print(int user,int com) {
-		if(user==0) 
-	}
+	
 }

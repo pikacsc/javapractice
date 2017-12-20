@@ -15,23 +15,15 @@ public class ControlEx2 {
 		
 	}
 	
-	void 로또() {
+	int 로또() {
 		int lottoNumb = (int)(Math.random()*45)+0;
-		print(lottoNumb)
+		return lottoNumb;
 	}
 	
 	void print() {
-		System.out.printf("첫번째 당첨번호 %d \n",lottoNumb);
-
-		System.out.printf("두번째 당첨번호 %d \n",lottoNumb);
-
-		System.out.printf("세번째 당첨번호 %d \n",lottoNumb);
-
-		System.out.printf("네번째 당첨번호 %d \n",lottoNumb);
-
-		System.out.printf("다섯번째 당첨번호 %d \n",lottoNumb);
-
-		System.out.printf("여섯번째 당첨번호 %d \n",lottoNumb);
+		for(int i=1;i<7;i++) {
+			System.out.printf("%d번째 당첨번호 %d \n",i,lottoNumb);
+		}
 	}
 
 }
