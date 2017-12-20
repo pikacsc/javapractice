@@ -90,7 +90,7 @@ public class Main {
 						break;
 					}else {
 						System.out.println("제조사 중국");
-						break;
+						break;  
 					}
 				}
 		}
