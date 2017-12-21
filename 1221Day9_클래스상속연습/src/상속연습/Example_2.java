@@ -3,10 +3,18 @@ class SmartPhone{
 	private String name;
 	private int price;
 	
+	public int getPrice() {
+		return price;
+	}
+
+	public void setPrice(int price) {
+		this.price = price;
+	}
+
 	//private 일경우 set변수() 해당 private 변수를 수정해주고
 	//get변수() 로 해당 변수를 리턴받을수 있게함 
 	public void setName(String x) {
-		name = x;
+		this.name = x;   //this.변수  this class(자기 클래스)내에 있는 변수
 	}
 	
 	public String getName() {
