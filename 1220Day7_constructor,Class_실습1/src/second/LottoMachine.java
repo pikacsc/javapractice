@@ -33,9 +33,8 @@ public class LottoMachine {
 		}
 		//셔플
 		for(int i =0; i<100;i++) {
-			int random = (int)(Math.random()*45); //0~44
-			int iFirst = random; 
-			int iSecond = random;
+			int iFirst = (int)(Math.random()*45); //0~44까지 랜덤숫자
+			int iSecond = (int)(Math.random()*45);
 			
 			
 			/*
@@ -54,14 +53,17 @@ public class LottoMachine {
 			
 			
 		}
-		for(int i = 0;i<7;i++) {
-			System.out.printf("%d번째 당첨번호 : %d \n",i+1,iLotto[i]);
-			if(i==6) System.out.printf("마지막 %d행운의 당첨번호",i+1);
+		for(int i = 1;i<=7;i++) {
+			if(i==7) {
+				System.out.printf("마지막 행운의 번호 %d",iLotto[i]);
+				break;
+			}
+			System.out.printf("%d번째 당첨번호 : %d \n",i,iLotto[i]);
 		}
 		
 		
 			
 	}
-}
-		
+
+}	
 	
