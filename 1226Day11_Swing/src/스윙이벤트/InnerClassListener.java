@@ -6,27 +6,10 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
-//
-//외부클래스
-//
-//class MyActionListener implements ActionListener{
-//
-//	@Override
-//	public void actionPerformed(ActionEvent e) {
-//		JButton b = (JButton)e.getSource();//다운캐스팅
-//		if(b.getText().equals("Action")) {      //b.getTest() 버튼의 내용 가져오기
-//			b.setText("액션");
-//		} else {
-//			b.setText("Action");
-//		}
-//	}
-//}
 
-
-
-public class ListenerSample extends JFrame {
+public class InnerClassListener extends JFrame {
 	
-	public ListenerSample() {
+	InnerClassListener() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setTitle("Action 이벤트 리스너 작성");
 		setLayout(new FlowLayout());
@@ -45,12 +28,25 @@ public class ListenerSample extends JFrame {
 		setVisible(true);
 	}
 	
-	
+	//내부로 옮김, 내부클래스
+	class MyActionListener implements ActionListener{
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		JButton b = (JButton)e.getSource();//다운캐스팅
+		if(b.getText().equals("Action")) {      //b.getTest() 버튼의 내용 가져오기
+			b.setText("액션");
+		} else {
+			b.setText("Action");
+		}
+	}
+}
 	
 	
 	
 	public static void main(String[] args) {
-		new ListenerSample();
+		new InnerClassListener();
+		
 	}
-}
 
+}
