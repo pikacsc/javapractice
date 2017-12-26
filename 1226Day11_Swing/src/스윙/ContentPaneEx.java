@@ -12,12 +12,22 @@ public class ContentPaneEx extends JFrame {
 	public ContentPaneEx() {
 		setTitle("컨텐트펜");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //X버튼 누를시 안전하게 종료,메모리 누수를 막기위해서
-		Container contentPane = getContentPane();
-		contentPane.setBackground(Color.BLACK);
-		contentPane.setLayout(new FlowLayout());
-		contentPane.add(new JButton("확인"));
-		contentPane.add(new JButton("취소"));
-		contentPane.add(new JButton("무시"));
+		
+		//이전버전 방식
+//		Container contentPane = getContentPane();
+//		contentPane.setBackground(Color.BLACK);
+//		contentPane.setLayout(new FlowLayout());
+//		contentPane.add(new JButton("확인"));
+//		contentPane.add(new JButton("취소"));
+//		contentPane.add(new JButton("무시"));
+		
+		
+//		JDK 1.5이후 버전
+		setLayout(new FlowLayout());
+		add(new JButton("확인"));
+		add(new JButton("취소"));
+		
+		
 		setSize(400, 400);
 		setVisible(true);
 	}
