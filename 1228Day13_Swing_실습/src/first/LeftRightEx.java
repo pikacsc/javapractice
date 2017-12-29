@@ -4,9 +4,6 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
-import java.awt.event.MouseListener;
 
 import javax.swing.ButtonGroup;
 import javax.swing.ImageIcon;
@@ -25,8 +22,10 @@ public class LeftRightEx extends JFrame implements ActionListener{
 			new ImageIcon("img/cherry.jpg")
 	
 	};
+	int ImgCnt =1;
 	JLabel imgLabel = new JLabel();
 	LeftRightEx() {
+		
 		setTitle("12.28실습 화살표");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLayout(new BorderLayout());
@@ -44,7 +43,7 @@ public class LeftRightEx extends JFrame implements ActionListener{
 		g.add(right);
 		panel.add(left);
 		panel.add(right);
-		imgLabel.setIcon(fruits[1]);
+		imgLabel.setIcon(fruits[ImgCnt]);
 		
 		left.addActionListener(this);
 		right.addActionListener(this);
@@ -70,29 +69,44 @@ public class LeftRightEx extends JFrame implements ActionListener{
 	}
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		JButton b = (JButton) e.getSource();
 		
+		JButton b = (JButton)e.getSource();
 		if(b.getText().equals("←")) {
-			imgLabel.setIcon(fruits[arrowChanger("←")]);
-		}
-		else if(b.getText().equals("→")) {
-			imgLabel.setIcon(fruits[arrowChanger("→")]);
+			ImgCnt = ImgCnt == 0? 2:ImgCnt-1;
+			imgLabel.setIcon(fruits[ImgCnt]);
+		}else if(b.getText().equals("→")) {
+			ImgCnt = ImgCnt == 2? 0:ImgCnt+1;
+			imgLabel.setIcon(fruits[ImgCnt]);
 		}
 		
-		
+		//내풀이
+//		JButton b = (JButton) e.getSource();
+//		int num = imgLabel.getIcon().equals(fruits[0])? 0:imgLabel.getIcon().equals(fruits[1])? 1 :2;		
+//		switch(num) {
+//			case 0:
+//				if(b.getText().equals("←")) {
+//					imgLabel.setIcon(fruits[2]);
+//				}else {
+//					imgLabel.setIcon(fruits[num+1]);
+//				}
+//				break;
+//			case 1:
+//				if(b.getText().equals("←")) {
+//					imgLabel.setIcon(fruits[num-1]);
+//				}else {
+//					imgLabel.setIcon(fruits[num+1]);
+//				}
+//				break;
+//			case 2:
+//				if(b.getText().equals("←")) {
+//					imgLabel.setIcon(fruits[num-1]);
+//				}else {
+//					imgLabel.setIcon(fruits[0]);
+//				}
+//				break;
+//		}
 	}
-	
-	int arrowChanger(String x) {
-		int num = 1;
-		if(x.equals("←")) {
-			num -= 1;
-		}
-		else{
-			num += 1;
-		}
-		return num;
-	}
-	
+
 	
 
 }
