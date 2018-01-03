@@ -10,6 +10,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JToolBar;
+import javax.swing.ToolTipManager;
 
 public class ToolBarEx extends JFrame{
 	
@@ -49,6 +50,13 @@ public class ToolBarEx extends JFrame{
 		combo.addItem("C++");
 		toolBar.add(combo);
 		add(toolBar,BorderLayout.NORTH);
+		
+		ToolTipManager m = ToolTipManager.sharedInstance();
+		m.setInitialDelay(0);
+		m.setDismissDelay(10000);
+	
+
+		
 	}
 	
 	public static void main(String[] args) {
