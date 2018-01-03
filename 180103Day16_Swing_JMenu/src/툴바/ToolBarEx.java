@@ -19,17 +19,27 @@ public class ToolBarEx extends JFrame{
 		
 		createToolBar();
 				
-		setSize(400, 400);
+		setSize(400, 200);
 		setVisible(true);
 	}
 	
 	void createToolBar() {
 		JToolBar toolBar = new JToolBar("메뉴");
 		toolBar.setBackground(Color.LIGHT_GRAY);
-		toolBar.add(new JButton("new"));
-		toolBar.add(new JButton(new ImageIcon("image/Chrome.png")));
+		JButton newBtn = new JButton("new");
+		newBtn.setToolTipText("파일을 생성합니다.");
+		toolBar.add(newBtn);
+		
+		JButton chromeBtn = new JButton(new ImageIcon("image/Chorme.png"));
+		chromeBtn.setToolTipText("크롬을 실행합니다.");
+		toolBar.add(chromeBtn);
+		
 		toolBar.addSeparator();
-		toolBar.add(new JButton(new ImageIcon("image/Ps.png")));
+		
+		JButton psBtn = new JButton(new ImageIcon("image/Ps.png"));
+		psBtn.setToolTipText("플레이스테이션을 실행합니다.");
+		toolBar.add(psBtn);
+		
 		toolBar.add(new JLabel("search"));
 		toolBar.add(new JTextField("text field"));
 		JComboBox combo = new JComboBox();
