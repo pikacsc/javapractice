@@ -9,7 +9,7 @@ public class ArrayListEx {
 		ArrayList<String> a = new ArrayList<String>();
 		
 		
-		//키보드로부터 4개의 이름 입력받아 ArrayList에 tkqdlq
+		//키보드로부터 4개의 이름 입력받아 ArrayList에 대입
 		Scanner scanner = new Scanner(System.in);
 		for(int i=0;i<4;i++) {
 			System.out.println("이름을 입력하세요>>");
