@@ -17,7 +17,7 @@ public class TabbedPaneEx extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		JTabbedPane pane = createTabbedPane();
 		add(pane, BorderLayout.CENTER);
-		setSize(250, 200);
+		setSize(400, 400);
 		setVisible(true);
 	}
 	
