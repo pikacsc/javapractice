@@ -4,7 +4,7 @@ public class DTO {
 	private float USD;
 	private float JPY;
 	private float EUR;
-
+''
 	private float exchange;
 	private float goodsPrice;
 	private float brandCommission;
