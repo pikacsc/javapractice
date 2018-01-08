@@ -34,11 +34,9 @@ public class ChatServerGUI extends JFrame {
 			BufferedWriter out = null; //네트워크로 보냄
 			ServerSocket listener = null;
 			Socket socket = null;
-			PrintWriter pw = null;
 			
 			
 			try {
-				pw = new PrintWriter(socket.getOutputStream(),true);
 				listener = new ServerSocket(9999); //서버 소켓 생성
 				socket = listener.accept(); //클라이언트 소켓 기다림
 				System.out.println("연결됨"); 
@@ -53,10 +51,12 @@ public class ChatServerGUI extends JFrame {
 						//클라이언트가 bye를 보내면 연결 종료
 						break;
 					}
-					textOutput.append(inputMessage+"\n"); ; // 클라이언트가 보낸 메세지 화면에 출력
-					String outputMessage = textInput.getText() ; //키보드에서 한행의 문자열 읽음
-					pw.println("서버>"+outputMessage); //키보드에서 읽은 문자열 전송
-					pw.flush(); //문자열 초기화
+					
+					System.out.println(inputMessage); // 클라이언트가 보낸 메세지 화면에 출력
+					String outputMessage = stin.readLine(); //키보드에서 한행의 문자열 읽음
+					out.write("서버>"+outputMessage+"\n"); //키보드에서 읽은 문자열 전송
+					out.flush(); //문자열 초기화
+					
 				}
 				
 				
